@@ -1,0 +1,15 @@
+{
+  "name": "my_electron_app",
+  "version": "1.0.0",
+  "description": "un projet pour essayer les fonctionnalités d'Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Moka26",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.0.0"
+  }
+}
