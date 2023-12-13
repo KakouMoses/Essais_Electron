@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron")
+const { app, BrowserWindow, ipcMain } = require("electron")
 const path = require('node:path')
 
 // Créer une fenêtre pour exécuter le programme
@@ -13,11 +13,12 @@ const createWindow = () => {
     })
     
 
-    win.loadFile('index.html')
+    win.loadFile('static/index.html')
 }
 
 // à utiliser pour lancer l'application
 app.whenReady().then(() => {
+    ipcMain.handle('ping', () => 'pong')
     createWindow()
 })
 
